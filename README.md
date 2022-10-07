@@ -2,9 +2,13 @@
 
 
 Based on the content covered on Oct 4th, I would love to talk about the confusion matrix and decision tree.
+***
+
+### Confusion Matrix
 
 
 Confusion matrix is a table that is used in classification problems to assess where errors in the model were made.
+Its former name is classification matrix, which later changed to confusion matrix.
 The rows represent the actual classes the outcomes should have been. While the columns represent the predictions we have made.
 For confusion matrix, there are three measures that we mentioned: precision, recall, and specificity.
 
@@ -32,13 +36,70 @@ plt.show()
 ```
 
 Using below lines,
+```
 Precision = metrics.precision_score(actual, predicted)
 Recall = metrics.recall_score(actual, predicted)
 Specificity = metrics.recall_score(actual, predicted, pos_label=0)
-
+```
 We could calculate these three measures. Notice that due to the randomness, these three results may change every time we randomize the sample. With confusion matrix, one could tell the performance of the classification model. 
+
+![下载](https://user-images.githubusercontent.com/108682585/194449710-8e20ec90-4108-4ba2-b51e-59a07b8c3e1d.png)
+
 
 *True Positive(Bottom-Right): Predicted values correctly predicted as actual is positive.  
 *False Positive(Top-Right):  Negative values are predicted as positive.  
 *False Negative(Bottom-Left): Positive values are predicted as negative.  
 *True Negative(Top-Left): Predicted values correctly predicted as actual is negative.  
+
+
+***
+
+### Decision Tree
+
+Decision tree is a technique that uses labeled input and output datasets to train models. The approach is used mainly for classification problems, which is the use of a model to classify an object. Notice that a decision tree is drawn upside down with its root is at the top. 
+
+Decision trees are traditionally trained in a greedy fashion, split after split that often in a binary fashion. 
+
+
+<img width="496" alt="fruit-decision-tree" src="https://user-images.githubusercontent.com/108682585/194463218-1d5e1cc5-db83-423a-ab0c-1d1b3253eb57.png">
+
+
+From the image above, we could see how a decision tree is applied in real life. 
+
+Categorical decision tree: Answers that fit in categorical values such as the coin toss heads or tails, 
+
+Continuous decision tree: Also known as the regression tree as the current decisions depend on the farther up the tree. This give an edge to it as it could predict based on multiple variables rather than on a single variable compared to the categorical decision tree.
+
+
+Real example of a decision tree:
+
+Consider the following data set, 
+
+![123](https://user-images.githubusercontent.com/108682585/194469473-fefd8ad3-6d59-439c-9522-d8bd149cbc18.PNG)
+
+```
+import pandas
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
+import matplotlib.pyplot as plt
+
+df = pandas.read_csv("data123.csv")
+# here I choose to assign a numerical value to each categorical value
+abc = {'UK': 0, 'USA': 1, 'CN': 2}
+df['Nationality'] = df['Nationality'].map(abc)
+abc = {'YES': 1, 'NO': 0}
+df['Promotion'] = df['Promotion'].map(abc)
+features = ['Age', 'Working Years', 'Number of projects', 'Nationality']
+
+x = df[features]
+y = df['Promotion']
+
+dtree = DecisionTreeClassifier()
+dtree = dtree.fit(x, y)
+# this visualizes the tree out below
+tree.plot_tree(dtree, feature_names=features)
+```
+
+![4](https://user-images.githubusercontent.com/108682585/194469830-695fefb2-9937-4ec4-91f7-9417e61557ed.PNG)
+
+
