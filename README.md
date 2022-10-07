@@ -46,7 +46,7 @@ Recall = metrics.recall_score(actual, predicted)
 f1_score(actual, predicted)
 Specificity = metrics.recall_score(actual, predicted, pos_label=0)
 ```
-We could calculate these three measures. Notice that due to the randomness, these three results may change every time we randomize the sample. With confusion matrix, one could tell the performance of the classification model. 
+We could calculate these measures. Notice that due to the randomness, these results may change every time we randomize the sample. With confusion matrix, one could tell the performance of the classification model. 
 
 ![下载](https://user-images.githubusercontent.com/108682585/194449710-8e20ec90-4108-4ba2-b51e-59a07b8c3e1d.png)
 
@@ -56,6 +56,7 @@ We could calculate these three measures. Notice that due to the randomness, thes
 *False Negative(Bottom-Left): Positive values are predicted as negative.  
 *True Negative(Top-Left): Predicted values correctly predicted as actual is negative.  
 
+Notice that there are version of confusion matrix that just return plain text and this one is just for a better look.
 
 ***
 
