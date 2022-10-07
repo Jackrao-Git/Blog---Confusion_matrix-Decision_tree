@@ -108,5 +108,18 @@ tree.plot_tree(dtree, feature_names=features)
 
 ![4](https://user-images.githubusercontent.com/108682585/194469830-695fefb2-9937-4ec4-91f7-9417e61557ed.PNG)
 
-Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high.
+Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high. Entropy has the range from 0 to 1.
+Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with lower gini index should be preferred. Gini has the range from 0 to 0.5.
 
+The Gini method uses this formula:
+
+Gini = 1 - (x/n)^2 - (y/n)^2
+
+Where x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us this calculation:
+
+1 - (5 / 10)^2 - (5 / 10)^2 = 0.5
+
+
+## Greedy Algorithm in Decision Tree
+
+A greedy algorithm builds a solution by going one step at a time through the feasible solutions, applying a heuristic to determine the best choice. This means that a greedy algorithm picks the best immediate choice and never reconsiders its choices. One of the abvious advantages for greedy algorithm is that the running time is relatively easy to analyze. However, Sometimes greedy algorithms fail to find the globally optimal solution because they do not consider all the data. 
