@@ -4,7 +4,7 @@
 Based on the content covered on Oct 4th, I would love to talk about the confusion matrix and decision tree.
 ***
 
-### Confusion Matrix
+## Confusion Matrix
 
 
 Confusion matrix is a table that is used in classification problems to assess where errors in the model were made.
@@ -54,7 +54,7 @@ We could calculate these three measures. Notice that due to the randomness, thes
 
 ***
 
-### Decision Tree
+## Decision Tree
 
 Decision tree is a technique that uses labeled input and output datasets to train models. The approach is used mainly for classification problems, which is the use of a model to classify an object. Notice that a decision tree is drawn upside down with its root is at the top. 
 
@@ -120,6 +120,6 @@ Where x is the number of positive answers("YES"), n is the number of samples, an
 1 - (5 / 10)^2 - (5 / 10)^2 = 0.5
 
 
-## Greedy Algorithm in Decision Tree
+### Greedy Algorithm in Decision Tree
 
 A greedy algorithm builds a solution by going one step at a time through the feasible solutions, applying a heuristic to determine the best choice. This means that a greedy algorithm picks the best immediate choice and never reconsiders its choices. One of the abvious advantages for greedy algorithm is that the running time is relatively easy to analyze. However, Sometimes greedy algorithms fail to find the globally optimal solution because they do not consider all the data. 
