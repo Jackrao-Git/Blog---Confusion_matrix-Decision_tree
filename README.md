@@ -18,6 +18,10 @@ Recall is calculated as the ratio between the number of Positive samples correct
 
 Specificity is calculated as the number of correct negative predictions divided by the total number of negatives. 
 
+F1 score is the weighted average of precision and recall. F1 Score = 2 * (Precision * Recall) / (Precision + Recall). It is nice as it considers both precision and recall of the model, but this makes it harder to interpret.
+
+Accuracy is calculated as the number of all correct predictions divided by the total number of the dataset. It is one of the most straight-forward metric out of the confusion matrix.
+
 Here are codes in python that can visualize a confusion matrix, here I take the sample size to be 300. 
 
 
@@ -39,6 +43,7 @@ Using below lines,
 ```
 Precision = metrics.precision_score(actual, predicted)
 Recall = metrics.recall_score(actual, predicted)
+f1_score(actual, predicted)
 Specificity = metrics.recall_score(actual, predicted, pos_label=0)
 ```
 We could calculate these three measures. Notice that due to the randomness, these three results may change every time we randomize the sample. With confusion matrix, one could tell the performance of the classification model. 
@@ -127,4 +132,4 @@ A greedy algorithm builds a solution by going one step at a time through the fea
 
 ### Dynamic Programming
 
-Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. If there are overlapping among these sub-problems it divides, then the solutions to these sub-problems can be saved and reused in the future without calculating them again.
+Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. If there are overlapping among these sub-problems it divides, then the solutions to these sub-problems can be saved and reused in the future without calculating them again. This technique is called memoization that saves values in the array.
