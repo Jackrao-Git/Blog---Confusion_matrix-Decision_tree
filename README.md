@@ -153,7 +153,15 @@ Say the famous example: fibonacci sequence, which is a sequence of numbers in wh
 
 If we starts from 0, the first several terms would be: 0, 1, 1, 2, 3, 5, 8 ...
 
-In this case, if we build a A(n) function that describes this sequence, it would be something like this:
+In this case, if we build a A(n)(n stands for the order of each term) function that describes this sequence, it would be something like this:
 
-
+```
+A(0) = 0
+A(1) = 1
+A(2) = 1
+A(3) = 2
+A(4) = 3
+A(5) = 5
+A(6) = 8
+```
 
