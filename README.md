@@ -129,9 +129,31 @@ Where x is the number of positive answers("YES"), n is the number of samples, an
 
 A greedy algorithm builds a solution by going one step at a time through the feasible solutions, applying a heuristic to determine the best choice. This means that a greedy algorithm picks the best immediate choice and never reconsiders its choices. One of the abvious advantages for greedy algorithm is that the running time is relatively easy to analyze. However, Sometimes greedy algorithms fail to find the globally optimal solution because they do not consider all the data. 
 
+Let's look at a case when greedy programming would fail:
+
+![567](https://user-images.githubusercontent.com/108682585/194650536-863da207-a7a6-4d82-80c1-c09f5e2aa171.PNG)
+
+Here is an example to find the greatest sum of a path in a tree. As greedy algorithm never looks back and reconsider previous decision, it would continue the execution after picking 12 and would never know there is a node with 99 on the left side of the tree. Therefore, the global result of the problem is wrong, while the local problems are all tackled in a correct way.
+
 
 ### Dynamic Programming
 
 Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. If there are overlapping among these sub-problems it divides, then the solutions to these sub-problems can be saved and reused in the future without calculating them again. This technique is called memoization that saves values in the array. Dynamic programming has some similarities to recursion as most of the optimization would need recursion. However, not all recursion can use dynamic programming as some of them do not have overlapping sub-problems, such as the merge sort.
+
+There are four main steps in the dynamic programming.
+
+*Divide problem into smaller problem of same type
+*Conquer each one recursively
+*Save the answers of each smaller problem for future use
+*Combine answers from small problems to get the answer for the original problem
+
+Let's look at an example:
+
+Say the famous example: fibonacci sequence, which is a sequence of numbers in which each number is the sum of the two preceding ones.
+
+If we starts from 0, the first several terms would be: 0, 1, 1, 2, 3, 5, 8 ...
+
+In this case, if we build a A(n) function that describes this sequence, it would be something like this:
+
 
 
