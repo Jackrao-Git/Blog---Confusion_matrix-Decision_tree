@@ -12,7 +12,7 @@ Its former name is classification matrix, which later changed to confusion matri
 The rows represent the actual classes the outcomes should have been. While the columns represent the predictions we have made.
 For confusion matrix, there are three measures that we mentioned: precision, recall, and specificity.
 
-Pecision is the ratio of correct positive predictions to the total predicted positives. Precision is calculated as the number of correct positive predictions (TP) divided by the total number of positive predictions (TP + FP).
+Pecision is the ratio of correct positive predictions to the total predicted positives. Precision is calculated as the number of correct positive predictions divided by the total number of positive predictions.
 
 Recall is calculated as the ratio between the number of Positive samples correctly classified as Positive to the total number of Positive samples. 
 
@@ -62,7 +62,7 @@ Notice that there are version of confusion matrix that just return plain text an
 
 ## Decision Tree
 
-Decision tree is a technique that uses labeled input and output datasets to train models. The approach is used mainly for classification problems, which is the use of a model to classify an object. Notice that a decision tree is drawn upside down with its root is at the top. 
+Decision tree is a technique that uses labeled input and output datasets to train models. Decision tree is a supervised learning algorithm that can be used for both classification and regression. Notice that a decision tree is drawn upside down with its root is at the top. 
 
 Decision trees are traditionally trained in a greedy fashion, split after split that often in a binary fashion. 
 
@@ -114,16 +114,16 @@ tree.plot_tree(dtree, feature_names=features)
 
 ![4](https://user-images.githubusercontent.com/108682585/194469830-695fefb2-9937-4ec4-91f7-9417e61557ed.PNG)
 
-Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high. Entropy has the range from 0 to 1.
-Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with lower gini index should be preferred. Gini has the range from 0 to 0.5.
+Information gain shows the information that is gained by a certain attribute. It is used to decide which element to split at each step in a decision tree. Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high. When a node's entropy is zero(leaf node), no any further splitting need to be done on a leaf node.
+Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with lower gini index should be preferred. If all elements are correctly divided into different classes, which is ideal, then it is considered to be pure. 
 
 The Gini method uses this formula:
 
 Gini = 1 - (x/n)^2 - (y/n)^2
 
-Where x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us this calculation:
+x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us the below calculation:
 
-1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this suggesting that gini impurity reaches its maximum value and thus is not an optimal split.
+1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this gini impurity suggests that the elements are distributed equally into some classes and thus is not an optimal split.
 
 
 ### Greedy Algorithm in Decision Tree
