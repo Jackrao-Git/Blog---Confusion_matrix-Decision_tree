@@ -117,9 +117,14 @@ Gini = 1 - (x/n)^2 - (y/n)^2
 
 Where x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us this calculation:
 
-1 - (5 / 10)^2 - (5 / 10)^2 = 0.5
+1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this suggesting that gini impurity reaches its maximum value and thus is not an optimal split.
 
 
 ### Greedy Algorithm in Decision Tree
 
 A greedy algorithm builds a solution by going one step at a time through the feasible solutions, applying a heuristic to determine the best choice. This means that a greedy algorithm picks the best immediate choice and never reconsiders its choices. One of the abvious advantages for greedy algorithm is that the running time is relatively easy to analyze. However, Sometimes greedy algorithms fail to find the globally optimal solution because they do not consider all the data. 
+
+
+### Dynamic Programming
+
+Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. 
