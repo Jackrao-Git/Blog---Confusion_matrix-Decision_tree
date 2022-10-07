@@ -60,11 +60,17 @@ Decision tree is a technique that uses labeled input and output datasets to trai
 
 Decision trees are traditionally trained in a greedy fashion, split after split that often in a binary fashion. 
 
+In fact, decision trees are common in daily life. Think about the time when you buy a car, you would consider a price range first, then is the model, the engine, the color and so on. This sequence of thinking could visualize in a tree-like graph. Now consider the below graph:
+
 
 <img width="496" alt="fruit-decision-tree" src="https://user-images.githubusercontent.com/108682585/194463218-1d5e1cc5-db83-423a-ab0c-1d1b3253eb57.png">
 
+The root here is the question: Is it yellow? Then it splits out to two different answers, namely yes and no, and then continue this spliting process until reaching the lowest purity. PS: A node is 100% impure when a node is split evenly, namely 50% to 50%, and 100% pure when all of its data belongs to only one class.
 
-From the image above, we could see how a decision tree is applied in real life. 
+
+From the image above, we could see some advantages and disadvantages about the decision tree.
+
+First, it is easy to understand. Second, non-linear parameter does not affect performance. However, the drawbacks are overfitting and instability as the model could become unstable due to the variation in the data.
 
 Categorical decision tree: Answers that fit in categorical values such as the coin toss heads or tails, 
 
@@ -102,4 +108,5 @@ tree.plot_tree(dtree, feature_names=features)
 
 ![4](https://user-images.githubusercontent.com/108682585/194469830-695fefb2-9937-4ec4-91f7-9417e61557ed.PNG)
 
+Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high.
 
