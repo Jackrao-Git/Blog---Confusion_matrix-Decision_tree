@@ -127,4 +127,4 @@ A greedy algorithm builds a solution by going one step at a time through the fea
 
 ### Dynamic Programming
 
-Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. 
+Compared to the greedy algorithm, dynamic programming makes decision at each step considering current problem and solution to the previously sub-problem to reach the optimal solution. It breaks down a big problem into many simpler sub-problems and realizing the fact that the optimal solution to the big problem would be depended on the solution to the sub-problems on the way. If there are overlapping among these sub-problems it divides, then the solutions to these sub-problems can be saved and reused in the future without calculating them again.
