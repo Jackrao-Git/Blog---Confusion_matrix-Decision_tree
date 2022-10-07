@@ -158,10 +158,12 @@ In this case, if we build a A(n)(n stands for the order of each term) function t
 ```
 A(0) = 0
 A(1) = 1
-A(2) = 1
-A(3) = 2
-A(4) = 3
-A(5) = 5
-A(6) = 8
+A(2) = 1 = A(0) + A(1)
+A(3) = 2 = A(1) + A(2)
+A(4) = 3 = A(2) + A(3)
+A(5) = 5 = A(3) + A(4)
+A(6) = 8 = A(4) + A(5)
 ```
+
+This would be a simplified example of how dynamic programming is used.
 
