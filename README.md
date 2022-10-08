@@ -184,6 +184,6 @@ This would be a simplified example of how dynamic programming is used.
 
 Picture references:
 
-https://pantelis.github.io/cs634/docs/common/lectures/decision-trees/
+https://pantelis.github.io/cs634/docs/common/lectures/decision-trees/   
 
 https://brilliant.org/wiki/greedy-algorithm/#:~:text=23%2024%2026-,Limitations%20of%20Greedy%20Algorithms,future%20choices%20it%20could%20make.
