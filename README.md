@@ -127,15 +127,15 @@ In the formula above, x is the number of positive answers("YES"), n is the numbe
 
 Advantages of the decision tree:
 
-*Work for both regression and classification problems
-*Simple to implement and interpret
-*Less preparation time as no need for normalizing and scaling in decision tree, missing values do not affect the result significantly.
+*Work for both regression and classification problems  
+*Simple to implement and interpret  
+*Less preparation time as no need for normalizing and scaling in decision tree, missing values do not affect the result significantly.    
 
 Disadvantages of the decision tree:
 
-*Small changes in data could cause the change in the structure of the decision tree causing instability.
-*The space complexity and the time complexity of a decision tree model are relatively higher compared to other models.
-*For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.
+*Small changes in data could cause the change in the structure of the decision tree causing instability.   
+*The space complexity and the time complexity of a decision tree model are relatively higher compared to other models.   
+*For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.    
 
 
 ### Greedy Algorithm in Decision Tree
@@ -155,11 +155,11 @@ Compared to the greedy algorithm, dynamic programming makes decision at each ste
 
 There are four main steps in the dynamic programming.
 
-*Divide problem into smaller problem of same type
-*Conquer each one recursively
-*Save the answers of each smaller problem for future use
-*Combine answers from small problems to get the answer for the original problem
-
+*Divide problem into smaller problem of same type  
+*Conquer each one recursively  
+*Save the answers of each smaller problem for future use  
+*Combine answers from small problems to get the answer for the original problem  
+ 
 Let's look at an example:
 
 Say the famous example: fibonacci sequence, which is a sequence of numbers in which each number is the sum of the two preceding ones.
