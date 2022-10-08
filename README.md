@@ -138,6 +138,15 @@ Disadvantages of the decision tree:
 *For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.    
 
 
+### Tree Pruning
+
+To reduce the problem of overfitting, there is a technique called tree pruning that is set out for reducing the size of a decision tree by removing parts of the tree that are non-critical. Genernally, there are two kinds of tree pruning.  
+
+First is called the post-pruning. As its name suggests, it is used after the decision tree is constructed. It is often used when the decision tree shows a trend of growing infinitely and overfitting. We use ```cost_complexity_pruning``` to execute post-pruning. Post-pruning could potentially be slow as the number of features increases in a tree.    
+
+Second is called the pre-pruning. As its name suggests, it is used before the decision tree is fully constructed. Early stop prevents the tree from reaching its full depth and speeds up the pruning process. However, it might let algorithm avoid partitions, even when the partition is extremely valuable. Usually, post-pruning would yield a better pruning result.
+
+
 ### Greedy Algorithm in Decision Tree
 
 A greedy algorithm builds a solution by going one step at a time through the feasible solutions, applying a heuristic to determine the best choice. This means that a greedy algorithm picks the best immediate choice and never reconsiders its choices. One of the abvious advantages for greedy algorithm is that the running time is relatively easy to analyze. However, Sometimes greedy algorithms fail to find the globally optimal solution because they do not consider all the data. 
