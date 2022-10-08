@@ -14,7 +14,7 @@ For confusion matrix, there are three measures that we mentioned: precision, rec
 
 Pecision is the ratio of correct positive predictions to the total predicted positives. Precision is calculated as the number of correct positive predictions divided by the total number of positive predictions.
 
-Recall is calculated as the ratio between the number of Positive samples correctly classified as Positive to the total number of Positive samples. 
+Recall is calculated as the ratio between the number of Positive samples correctly classified as positive to the total number of positive samples. 
 
 Specificity is calculated as the number of correct negative predictions divided by the total number of negatives. 
 
@@ -56,7 +56,7 @@ We could calculate these measures. Notice that due to the randomness, these resu
 *False Negative(Bottom-Left): Positive values are predicted as negative.  
 *True Negative(Top-Left): Predicted values correctly predicted as actual is negative.  
 
-Notice that there are version of confusion matrix that just return plain text and this one is just for a better look.
+Notice that there are versions of confusion matrix that just return plain text and this one is just for a better look.
 
 ***
 
@@ -121,9 +121,21 @@ The Gini method uses this formula:
 
 Gini = 1 - (x/n)^2 - (y/n)^2
 
-x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us the below calculation:
+In the formula above, x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us the below calculation:
 
 1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this gini impurity suggests that the elements are distributed equally into some classes and thus is not an optimal split.
+
+Advantages of the decision tree:
+
+*Work for both regression and classification problems
+*Simple to implement and interpret
+*Less preparation time as no need for normalizing and scaling in decision tree, missing values do not affect the result significantly.
+
+Disadvantages of the decision tree:
+
+*Small changes in data could cause the change in the structure of the decision tree causing instability.
+*The space complexity and the time complexity of a decision tree model are relatively higher compared to other models.
+*For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.
 
 
 ### Greedy Algorithm in Decision Tree
