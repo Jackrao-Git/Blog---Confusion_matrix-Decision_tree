@@ -114,16 +114,20 @@ tree.plot_tree(dtree, feature_names=features)
 
 ![4](https://user-images.githubusercontent.com/108682585/194469830-695fefb2-9937-4ec4-91f7-9417e61557ed.PNG)
 
-Information gain shows the information that is gained by a certain attribute. It is used to decide which element to split at each step in a decision tree. Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high. When a node's entropy is zero(leaf node), no any further splitting need to be done on a leaf node.
-Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with lower gini index should be preferred. If all elements are correctly divided into different classes, which is ideal, then it is considered to be pure. 
-
+Gini Index is a metric to measure how often a randomly chosen element would be incorrectly identified. It means an attribute with lower gini index should be preferred. If all elements are correctly divided into different classes, which is ideal, then it is considered to be pure.     
 The Gini method uses this formula:
 
 Gini = 1 - (x/n)^2 - (y/n)^2
 
 In the formula above, x is the number of positive answers("YES"), n is the number of samples, and y is the number of negative answers ("NO"), which gives us the below calculation:
 
-1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this gini impurity suggests that the elements are distributed equally into some classes and thus is not an optimal split.
+1 - (5 / 10)^2 - (5 / 10)^2 = 0.5, this gini impurity suggests that the elements are distributed equally into some classes and thus is not an optimal split.       
+
+These are some of terms related to decision trees. Information gain shows the information that is gained by a certain attribute. It is used to decide which element to split at each step in a decision tree. The node with highest information gain from a set should be selected as the root node.     
+
+Entropy is the measure of unpredictability in a dataset. For example, we have a bag of candys and all of them are mixed. In this case the entropy is very high. When a node's entropy is zero(leaf node), no any further splitting need to be done on a leaf node.      
+
+
 
 Advantages of the decision tree:
 
@@ -135,12 +139,12 @@ Disadvantages of the decision tree:
 
 *Small changes in data could cause the change in the structure of the decision tree causing instability.   
 *The space complexity and the time complexity of a decision tree model are relatively higher compared to other models.   
-*For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.    
+*For a large data set, one single tree may grow a lot of nodes which might result in complexity and leads to overfitting, as we need several decision trees together, which is called random forest for a better prediction in this case.     
 
 
 ### Tree Pruning
 
-To reduce the problem of overfitting, there is a technique called tree pruning that is set out for reducing the size of a decision tree by removing parts of the tree that are non-critical. Genernally, there are two kinds of tree pruning.  
+Decision trees are prone to overfitting as it have more specificity when growing deep. When this happends, the model fails to perform accurately against unseen data. To reduce the problem of overfitting, there is a technique called tree pruning that is set out for reducing the size of a decision tree by removing parts of the tree that are non-critical. Genernally, there are two kinds of tree pruning.  
 
 First is called the post-pruning. As its name suggests, it is used after the decision tree is constructed. It is often used when the decision tree shows a trend of growing infinitely and overfitting. We use ```cost_complexity_pruning``` to execute post-pruning. Post-pruning could potentially be slow as the number of features increases in a tree.    
 
@@ -155,7 +159,7 @@ Let's look at a case when greedy programming would fail:
 
 ![567](https://user-images.githubusercontent.com/108682585/194650536-863da207-a7a6-4d82-80c1-c09f5e2aa171.PNG)
 
-Here is an example to find the greatest sum of a path in a tree. As greedy algorithm never looks back and reconsider previous decision, it would continue the execution after picking 12 and would never know there is a node with 99 on the left side of the tree. Therefore, the global result of the problem is wrong, while the local problems are all tackled in a correct way.
+Here is an example to find the greatest sum of a path in a tree. As greedy algorithm never looks back and reconsider previous decision, it would continue the execution after picking 12 and would not be aware that there is a node with 99 on the left side of the tree. Therefore, the global result of the problem is wrong, while the local problems are all tackled in a correct way.
 
 
 ### Dynamic Programming
