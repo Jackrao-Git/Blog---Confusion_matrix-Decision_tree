@@ -18,7 +18,7 @@ Recall is calculated as the ratio between the number of Positive samples correct
 
 Specificity is calculated as the number of correct negative predictions divided by the total number of negatives. 
 
-F1 score is the weighted average of precision and recall. F1 Score = 2 * (Precision * Recall) / (Precision + Recall). It is nice as it considers both precision and recall of the model, but this makes it harder to interpret.
+F1 score is the weighted average of precision and recall. F1 Score = 2 * (Precision * Recall) / (Precision + Recall). It is nice as it considers both precision and recall of the model, but this blending makes it harder to interpret.
 
 Accuracy is calculated as the number of all correct predictions divided by the total number of the dataset. It is one of the most straight-forward metric out of the confusion matrix.
 
