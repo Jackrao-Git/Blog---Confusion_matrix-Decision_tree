@@ -14,17 +14,17 @@ Its former name is classification matrix, which later changed to confusion matri
 The rows represent the actual classes the outcomes should have been. While the columns represent the predictions we have made.
 For confusion matrix, there are three measures that we mentioned: precision, recall, and specificity.
 
-Pecision is the ratio of correct positive predictions to the total predicted positives. Precision is calculated as the number of correct positive predictions divided by the total number of positive predictions.
+Precision is the ratio of correct positive predictions to the total predicted positives. Precision is calculated as the number of correct positive predictions divided by the total number of positive predictions.
 
-Recall is calculated as the ratio between the number of Positive samples correctly classified as positive to the total number of positive samples. 
+Recall is calculated as the ratio between the number of positive samples correctly classified as positive to the total number of positive samples. 
 
 Specificity is calculated as the number of correct negative predictions divided by the total number of negatives. 
 
-F1 score is the weighted average of precision and recall. F1 Score = 2 * (Precision * Recall) / (Precision + Recall). It is nice as it considers both precision and recall of the model, but this blending makes it harder to interpret.
+F1 score is the weighted average of precision and recall. F1 score = 2 * (Precision * Recall) / (Precision + Recall). It is nice as it considers both precision and recall of the model, but this blending makes it harder to interpret.
 
 Accuracy is calculated as the number of all correct predictions divided by the total number of the dataset. It is one of the most straight-forward metric out of the confusion matrix.
 
-Here are codes in python that can visualize a confusion matrix, here I take the sample size to be 300. 
+Here are codes in python that can visualize a confusion matrix, I take the sample size to be 300. 
 
 
 ```
