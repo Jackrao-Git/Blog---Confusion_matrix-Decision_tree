@@ -1,4 +1,4 @@
-# Confusion_matrix & Decision_tree Explanations
+# Blog -- Confusion_matrix & Decision_tree
 
 *Jiewu Rao*
 
